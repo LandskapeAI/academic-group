@@ -1,0 +1,30 @@
+<section id="about" class="home-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-4 section-heading">
+                <h1>{{ with .Site.Params.about.title }}{{ . | markdownify }}{{ end }}</h1>
+                {{ with .Site.Params.about.subtitle }}<p>{{ . | markdownify }}</p>{{ end }}
+            </div>
+            
+            <div class="article-list-item" itemscope itemprop="blogPost">
+                <!-- {{ if .Params.image }}
+                    <a href="{{ .Permalink }}">
+                        <img src="{{ $.Site.BaseURL }}/img/{{ .Params.image }}" class="article-banner" itemprop="image">
+                    </a>
+                {{end}} -->
+                <!-- <h3 class="article-title" itemprop="name"><a href="{{ .Permalink }}" itemprop="url">{{ .Title }}</a></h3> -->
+                <p class="article-style" itemprop="articleBody">
+                    {{ .Site.Params.about.text }}
+                </p>
+                <p class="read-more">
+                    <a href="/about" class="btn btn-primary btn-outline">
+                        {{ with .Site.Params.posts.str_read_more }}{{ . | markdownify }}{{ end }}
+                    </a>
+                </p>
+              </div>
+            
+        </div>
+
+    </div>
+    <!-- {{ partial "sponsors.html" . }} -->
+</section>

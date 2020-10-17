@@ -21,4 +21,20 @@
     </li>
     {{ end }}
 
+    <!-- Contact Us Form  -->
+    <div class="form-container">
+    <form action="https://formspree.io/f/maylezze" method="POST">
+        <div class="row">
+            <div class="col-25"> <label> Email: </label> </div>
+            <div class="col-75"> <input type="text" name="_replyto"> </label> </div>
+        </div>
+        <div class="row">
+            <div class="col-25"> <label> Message: </label> </div>
+            <div class="col-75"> <textarea name="message"></textarea> </div> 
+        </div>
+        <div class="row">
+            <button class="btn btn-primary btn-outline" type="submit">Send</button>
+        </div>
+    </form>
+
 </ul>
