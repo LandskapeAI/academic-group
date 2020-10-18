@@ -1,3 +1,4 @@
+{{ if .Site.Params.about }}
 <section id="about" class="home-section">
     <div class="container">
         <div class="row">
@@ -16,15 +17,18 @@
                 <p class="article-style" itemprop="articleBody">
                     {{ .Site.Params.about.text }}
                 </p>
+
                 <p class="read-more">
                     <a href="/about" class="btn btn-primary btn-outline">
                         {{ with .Site.Params.posts.str_read_more }}{{ . | markdownify }}{{ end }}
                     </a>
                 </p>
-              </div>
+                
+            </div>
             
         </div>
 
     </div>
     <!-- {{ partial "sponsors.html" . }} -->
 </section>
+{{ end }}
