@@ -14,7 +14,7 @@
             <div class="navbar-brand">
                 {{ if isset .Site.Params "logo"}}
                     <a class="logo" href="{{.Site.Params.logo.link}}">
-                        <img src="/{{.Site.Params.logo.image}}" alt="University logo"></img>
+                        <img src="/{{.Site.Params.logo.image}}" height="{{.Site.Params.logo.height}}" width="{{.Site.Params.logo.width}}" alt="University logo"></img>
                     </a>
                 {{ end }}
                 {{ if isset .Site.Params "navbar_hierarchy" }}
